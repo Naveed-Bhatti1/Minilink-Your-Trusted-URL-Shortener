@@ -20,13 +20,16 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
+    <html
+      lang="en"
+      className="min-h-screen bg-[radial-gradient(125%_125%_at_50%_10%,#2550fa_40%,#fff_100%)]"
+    >
       <body
-        className={`${geistSans.variable} ${geistMono.variable} text-white antialiased relative min-h-screen bg-gradient-to-r from-blue-600 to-indigo-700 overflow-hidden`}
+        className={`${geistSans.variable} ${geistMono.variable} 
+`}
       >
         <Navbar />
         {children}
-        <div className="absolute bottom-0 left-0 w-full h-60 bg-gradient-to-t from-white to-transparent" />
       </body>
     </html>
   );

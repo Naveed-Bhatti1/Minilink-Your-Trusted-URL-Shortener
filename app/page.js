@@ -23,7 +23,7 @@ export default function Home() {
           />
         </div>
       </div>
-      <div className="breaker shadow-lg shadow-white/50  h-[2px] mt-10 w-full bg-gradient-to-r from-blue-600 from-0% via-blue-300 via-50% to-indigo-700 to-100%" />
+      <div className="breaker shadow-lg shadow-white/50  h-[2px] mt-4 w-2/3 mx-auto bg-gradient-to-r from-transparent from-0% via-blue-300 via-50% to-transparent to-100%" />
     </>
   );
 }
