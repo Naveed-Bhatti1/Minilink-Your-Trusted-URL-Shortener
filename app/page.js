@@ -1,11 +1,18 @@
 import Image from "next/image";
+import localFont from "next/font/local";
+
+const poppins = localFont({
+  src: "../app/fonts/Poppins/Poppins-ExtraBold.ttf",
+  variable: "--font-poppins",
+  weight: "800",
+})
 
 export default function Home() {
   return (
     <>
-      <div className="pt-22 h-[60vh] p-3 grid grid-cols-2 gap-2">
-        <div className="txt flex flex-col justify-center items-center px-60">
-          <p className="text-2xl font-bold">
+      <div className="pt-20 h-[60vh] p-3 grid grid-cols-2 gap-2">
+        <div className="txt flex flex-col justify-center items-center px-6 md:px-20 lg:px-40">
+          <p className={`text-2xl font-bold ${poppins.className}`}>
             The Best URL Shortener for Your Needs
           </p>
           <p className="text-blue-200 text-center mt-4">
