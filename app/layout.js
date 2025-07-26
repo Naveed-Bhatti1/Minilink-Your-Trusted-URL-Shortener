@@ -22,7 +22,7 @@ export default function RootLayout({ children }) {
   return (
     <html
       lang="en"
-      className="min-h-screen bg-[radial-gradient(125%_125%_at_50%_10%,#2550fa_40%,#fff_100%)]"
+      className="min-h-screen bg-[radial-gradient(125%_125%_at_50%_10%,#2550fa_40%,#fff_100%)] text-white"
     >
       <body
         className={`${geistSans.variable} ${geistMono.variable} 
