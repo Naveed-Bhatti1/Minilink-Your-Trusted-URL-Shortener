@@ -1,4 +1,5 @@
 "use client";
+import Link from "next/link";
 import React, { useState } from "react";
 import { ToastContainer, toast } from "react-toastify";
 
@@ -72,14 +73,16 @@ const shorten = () => {
       {generated && (
         <div className="result text-center mt-4">
           <p className="text-lg font-semibold">Generated Short URL:</p>
-          <a
-            href={generated}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-blue-white hover:underline"
-          >
-            {generated}
-          </a>
+          <code>
+            <Link
+              href={generated}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-blue-white hover:underline"
+            >
+              {generated}
+            </Link>
+          </code>
         </div>
       )}
     </div>
