@@ -1,12 +1,18 @@
 "use client";
 import React, { useState } from "react";
+import { ToastContainer, toast } from "react-toastify";
 
 const shorten = () => {
   const [url, seturl] = useState("");
   const [shortUrl, setShortUrl] = useState("");
-  const [generated, setGenerated] = useState(false);
+  const [generated, setGenerated] = useState("");
 
   const generate = async () => {
+    if (!url) {
+      toast.error("Please enter a URL to shorten");
+      return;
+    }
+
     const myHeaders = new Headers();
     myHeaders.append("Content-Type", "application/json");
 
@@ -24,12 +30,19 @@ const shorten = () => {
 
     fetch("http://localhost:3000/api/shorten", requestOptions)
       .then((response) => response.json())
-      .then((result) => console.log(result))
+      .then((result) => {
+        seturl("");
+        setShortUrl("");
+        setGenerated(`${process.env.NEXT_PUBLIC_BASE_URL}/${result.shortURL}`);
+        console.log(result);
+        toast(result.message);
+      })
       .catch((error) => console.error(error));
   };
 
   return (
     <div className="shorten max-w-lg mx-auto p-4 rounded-2xl border border-black/10 shadow-lg shadow-black/20 mt-40 pb-10 flex flex-col gap-6 ">
+      <ToastContainer theme="dark" />
       <h1 className="text-2xl font-bold text-center pt-3 ">
         Generate your Short URLs
       </h1>
@@ -56,6 +69,19 @@ const shorten = () => {
           Generate
         </button>
       </div>
+      {generated && (
+        <div className="result text-center mt-4">
+          <p className="text-lg font-semibold">Generated Short URL:</p>
+          <a
+            href={generated}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-blue-white hover:underline"
+          >
+            {generated}
+          </a>
+        </div>
+      )}
     </div>
   );
 };
