@@ -70,7 +70,7 @@ const Navbar = () => {
                   href={"/"}
                   className={`block py-2 px-3 rounded-sm ${
                     pathname === "/"
-                      ? "text-blue-300 font-semibold"
+                      ? "text-blue-300 font-semibold underline"
                       : "text-white"
                   }`}
                   aria-current="page"
@@ -83,7 +83,7 @@ const Navbar = () => {
                   href={"/shorten"}
                   className={`block py-2 px-3 rounded-sm ${
                     pathname === "/shorten"
-                      ? "text-blue-300 font-semibold"
+                      ? "text-blue-300 font-semibold underline"
                       : "text-white"
                   }`}
                 >
@@ -95,7 +95,7 @@ const Navbar = () => {
                   href={"/about"}
                   className={`block py-2 px-3 rounded-sm ${
                     pathname === "/about"
-                      ? "text-blue-300 font-semibold"
+                      ? "text-blue-300 font-semibold underline"
                       : "text-white"
                   }`}
                 >
@@ -108,7 +108,7 @@ const Navbar = () => {
                   href={"/contact"}
                   className={`block py-2 px-3 rounded-sm ${
                     pathname === "/contact"
-                      ? "text-blue-300 font-semibold"
+                      ? "text-blue-300 font-semibold underline"
                       : "text-white"
                   }`}
                 >
