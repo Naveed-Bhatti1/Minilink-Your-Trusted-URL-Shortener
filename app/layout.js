@@ -25,7 +25,7 @@ export default function RootLayout({ children }) {
       className="min-h-screen bg-[radial-gradient(125%_125%_at_50%_10%,#2550fa_40%,#fff_100%)] text-white"
     >
       <body
-        className={`${geistSans.variable} ${geistMono.variable} 
+        className={`${geistSans.variable} ${geistMono.variable} mt-24 
 `}
       >
         <Navbar />
