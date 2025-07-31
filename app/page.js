@@ -11,9 +11,9 @@ const poppins = Poppins({
 export default function Home() {
   return (
     <>
-      <div className="min-h-screen grid grid-cols-1 lg:grid-cols-2 gap-4 p-6">
+      <div className="min-h-[50vh] grid grid-cols-1 lg:grid-cols-2 gap-4 p-6">
         {/* Text Section */}
-        <div className="flex flex-col justify-center items-center text-center px-4 sm:px-8 lg:px-20">
+        <div className="flex flex-col justify-center items-center text-center  px-4 sm:px-8 lg:px-20">
           <p
             className={`text-2xl sm:text-3xl md:text-4xl font-extrabold ${poppins.variable}`}
           >
@@ -44,12 +44,13 @@ export default function Home() {
         </div>
 
         {/* Image Section */}
-        <div className="relative w-full h-64 sm:h-96 lg:h-auto">
+        <div className="relative w-full h-64 sm:h-96 ">
           <Image
             fill
             src="/vector.jpg"
             alt="A vector image"
-            sizes="100vw"
+            sizes="(max-width: 1024px) 100vw, 50vw"
+
             className="object-cover rounded-lg"
           />
         </div>
