@@ -9,7 +9,7 @@ export default function AboutPage() {
         </h1>
         <p className="text-lg text-gray-200 mb-10 leading-relaxed">
           MiniLink is a sleek, lightning-fast URL shortener built to simplify your digital sharing experience.
-          Whether you're a creator, student, or entrepreneur, MiniLink helps you share smarter.
+          Whether you&apos;re a creator, student, or entrepreneur, MiniLink helps you share smarter.
         </p>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-left">
